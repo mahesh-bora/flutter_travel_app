@@ -29,28 +29,43 @@ class BarItemPage extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 alignment: Alignment.center,
-                child: AspectRatio(
-                  aspectRatio: 1.0,
-                  child: PieChart(
-                    PieChartData(
-                      pieTouchData: PieTouchData(enabled: true),
-                      sections: genresData.map((data) {
-                        return PieChartSectionData(
-                          value: data.value.toDouble(),
-                          title: data.genre,
-                          titleStyle: TextStyle(color: Colors.white),
-                          color: getColor(data.genre),
-                          radius: 100,
-                        );
-                      }).toList(),
-                      centerSpaceRadius: 70,
-                      borderData: FlBorderData(show: false),
-                      sectionsSpace: 0,
-                      centerSpaceColor: Colors.white,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    AspectRatio(
+                      aspectRatio: 1.0,
+                      child: PieChart(
+                        PieChartData(
+                          pieTouchData: PieTouchData(enabled: true),
+                          sections: genresData.map((data) {
+                            return PieChartSectionData(
+                              value: data.value.toDouble(),
+                              title: data.genre,
+                              titleStyle: TextStyle(color: Colors.white),
+                              color: getColor(data.genre),
+                              radius: 100,
+                            );
+                          }).toList(),
+                          centerSpaceRadius: 70,
+                          borderData: FlBorderData(show: false),
+                          sectionsSpace: 0,
+                          centerSpaceColor: Colors.white,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
+              SizedBox(
+                height: 15,
+              ),
+              Container(
+                child: Text(
+                    '''Embark on a journey of diverse delight – from the exhilarating rush of skiing to the tranquil shores of beaches, the freefall thrill of skydiving, and the awe-inspiring heights of mountain hikes. Each adventure unfolds a unique chapter in the grand story of exploration.''',
+                    style:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              )
             ],
           ),
         ),
