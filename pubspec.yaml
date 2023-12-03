@@ -40,13 +40,20 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  firebase_auth: ^4.12.1
+  firebase_core: ^2.21.0
+  google_sign_in: ^6.1.5
+  cloud_firestore: ^4.13.1
+  image_picker: ^1.0.4
+  firebase_storage: ^11.5.1
+  fl_chart: ^0.65.0
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+#  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -75,7 +82,10 @@ flutter:
     - lib/img/button-1.png
     - lib/img/button-2.png
     - lib/img/bookbutton.png
+    - lib/img/download.png
     - lib/img/done.gif
+    - lib/img/travel.gif
+
 
 
 

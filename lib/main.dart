@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_travelapp/pages/booking.dart';
 import 'package:flutter_travelapp/pages/details_page.dart';
 import 'package:flutter_travelapp/pages/homepage.dart';
+import 'package:flutter_travelapp/pages/login_screen.dart';
 import 'package:flutter_travelapp/pages/navpages/main_page.dart';
+import 'package:flutter_travelapp/pages/profile_screen.dart';
 import 'package:flutter_travelapp/pages/thank_you_page.dart';
 import 'package:flutter_travelapp/pages/welcome.dart';
 
@@ -21,9 +23,12 @@ class MyApp extends StatelessWidget {
         body: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Travel App',
-          routes:{
-            "/":(context)=> WelcomePage(),
-            "homepage":(context)=> HomePage(),
+          routes: {
+            // "/": (context) => ProfileScreen(),
+            "/": (context) => LoginPage(),
+            "profilepage": (context) => ProfileScreen(),
+            "welcomepage": (context) => WelcomePage(),
+            "homepage": (context) => HomePage(),
             "detailspage": (context) => DetailPage(),
             "mainpage": (context) => MainPage(),
             "thankyoupage": (context) => ThankYouPage(),
@@ -37,4 +42,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

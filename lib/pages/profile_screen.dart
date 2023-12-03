@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyPage extends StatelessWidget {
-  MyPage({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerBio = TextEditingController();
 
@@ -20,7 +25,7 @@ class MyPage extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 60,
-                backgroundImage: AssetImage('lib/img/download.png'),
+                backgroundImage: AssetImage('assets/demo_avatar.jpg'),
               ),
               SizedBox(height: 20),
               TextFormField(
@@ -31,7 +36,7 @@ class MyPage extends StatelessWidget {
                   hintText: 'Enter your Name',
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 15),
               TextFormField(
                 controller: _controllerName,
                 decoration: InputDecoration(
@@ -40,16 +45,17 @@ class MyPage extends StatelessWidget {
                   hintText: 'The places you like to visit...',
                 ),
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 15),
               TextFormField(
                 controller: _controllerBio,
-                maxLines: 5,
+                maxLines: 3,
                 decoration: InputDecoration(
+                  labelText: "Bio",
                   border: OutlineInputBorder(),
                   hintText: 'Tell us about yourself',
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
                   // Handle save action here

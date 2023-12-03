@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_travelapp/pages/navpages/main_page.dart';
-import 'package:flutter_travelapp/pages/welcome.dart';
 import 'package:flutter_travelapp/widgets/app_large_text.dart';
+
 import '../misc/colors.dart';
 
 class ThankYouPage extends StatelessWidget {
@@ -17,12 +17,11 @@ class ThankYouPage extends StatelessWidget {
           onPressed: () async {
             var message = await Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
-                  return MainPage();
-                }));
+              return MainPage();
+            }));
           },
           child: Container(
               margin: EdgeInsets.only(right: 20, left: 10),
-
               height: 200,
               width: 5000,
               decoration: BoxDecoration(
@@ -33,7 +32,11 @@ class ThankYouPage extends StatelessWidget {
                 // crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AppLargeText(text: "We are Under Development", color: Colors.black54,size: 27,),
+                  AppLargeText(
+                    text: "Oops! We are Under Development👷🏻‍♂️",
+                    color: Colors.black54,
+                    size: 27,
+                  ),
                 ],
               )),
         ),
