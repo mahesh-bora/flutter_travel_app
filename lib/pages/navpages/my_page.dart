@@ -5,6 +5,7 @@ class MyPage extends StatelessWidget {
 
   final TextEditingController _controllerName = TextEditingController();
   final TextEditingController _controllerBio = TextEditingController();
+  final TextEditingController _controllerPlace = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class MyPage extends StatelessWidget {
               ),
               SizedBox(height: 25),
               TextFormField(
-                controller: _controllerName,
+                controller: _controllerPlace,
                 decoration: InputDecoration(
                   labelText: "Places",
                   border: OutlineInputBorder(),

@@ -15,7 +15,8 @@ class BarItemPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Travel App"),
+          title: Text("Travel App",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -62,9 +63,9 @@ class BarItemPage extends StatelessWidget {
               ),
               Container(
                 child: Text(
-                    '''Embark on a journey of diverse delight – from the exhilarating rush of skiing to the tranquil shores of beaches, the freefall thrill of skydiving, and the awe-inspiring heights of mountain hikes. Each adventure unfolds a unique chapter in the grand story of exploration.''',
+                    '''"Embark on a journey of diverse delight – from the exhilarating rush of skiing to the tranquil shores of beaches, the freefall thrill of skydiving, and the awe-inspiring heights of mountain hikes. Each adventure unfolds a unique chapter in the grand story of exploration."''',
                     style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+                        TextStyle(fontSize: 21, fontWeight: FontWeight.w500)),
               )
             ],
           ),

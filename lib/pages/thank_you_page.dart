@@ -33,9 +33,10 @@ class ThankYouPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AppLargeText(
-                    text: "Oops! We are Under Development👷🏻‍♂️",
+                    text: '''"Oops! We are Under Development👷🏻"
+              (tap here to go back)''',
                     color: Colors.black54,
-                    size: 27,
+                    size: 20,
                   ),
                 ],
               )),
